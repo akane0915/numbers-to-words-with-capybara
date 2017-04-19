@@ -3,13 +3,13 @@ require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe('the scrabble path', {:type => :feature}) do
-  it('processes the user entry and return the scrabble score') do
+describe('The numbers to words path', {:type => :feature}) do
+  it('processes the user entry in numeric form and returns the written form of the number') do
     visit('/')
-    fill_in('word', :with => 'hello')
-    click_button('Submit2')
-    expect(page).to have_content('8')
+    fill_in('number', :with => '1000001')
+    click_button('Submit Number')
+    expect(page).to have_content('one million one')
   end
 
-  it('processes a more advanced scrabble word into a larger score')
+
 end

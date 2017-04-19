@@ -1,5 +1,5 @@
 require('rspec')
-require('numbers_to_words')
+require('wordify')
 require('pry')
 
 
